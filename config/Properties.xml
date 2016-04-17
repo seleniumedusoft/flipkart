@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<add key="appURL" value="http://www.flipkart.com"/>
+<add key="browser" value="chrome"/>
+<add key="chrmoedriverPath" value=""/>
