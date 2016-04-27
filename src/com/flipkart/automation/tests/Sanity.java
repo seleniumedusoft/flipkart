@@ -37,6 +37,15 @@ public class Sanity {
 	@Test
 	public void autTC02(){
 		
+		Flipkart flipkart = new Flipkart();
+		flipkart.setWebDriver("chrome");
+		
+		//launch homepage
+		FlipkartHomePage homepage= flipkart.launch();
+		
+		//validate title
+		homepage.veriyLogin();		
+		
 		
 	}
 	
@@ -46,6 +55,14 @@ public class Sanity {
 	 */
 	@Test
 	public void autTC03(){
+		Flipkart flipkart = new Flipkart();
+		flipkart.setWebDriver("chrome");
+		
+		//launch homepage
+		FlipkartHomePage homepage= flipkart.launch();
+		
+		//validate title
+		homepage.verifyElement();	
 		
 		
 	}
