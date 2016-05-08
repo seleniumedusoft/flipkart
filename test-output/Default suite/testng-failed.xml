@@ -5,7 +5,8 @@
     <classes>
       <class name="com.flipkart.automation.tests.Sanity">
         <methods>
-          <include name="autTC02"/>
+          <include name="setupTestSuite"/>
+          <include name="autTC01"/>
         </methods>
       </class> <!-- com.flipkart.automation.tests.Sanity -->
     </classes>

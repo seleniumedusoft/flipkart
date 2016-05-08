@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="any name">
+
+	<parameter name="browser" value="chrome"/>
+	<test name="chrome test ">
+		<classes>
+			<class name="com.flipkart.automation.tests.Sanity">
+				<methods>
+					<include name="autTC01" />
+					<include name="autTC02" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	
+	
+	
+	
+	
+	<parameter name="browser" value="firefox"/>
+	<test name="firefox test ">
+		<classes>
+			<class name="com.flipkart.automation.tests.Sanity">
+				<methods>
+					<include name="autTC01" />
+					<include name="autTC02" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+	
+	
+</suite> <!-- Suite -->

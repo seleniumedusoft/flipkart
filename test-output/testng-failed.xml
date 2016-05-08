@@ -1,13 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [any name]" parallel="none">
+  <parameter name="browser" value="firefox"/>
+  <test name="chrome test (failed)" parallel="none">
     <classes>
       <class name="com.flipkart.automation.tests.Sanity">
         <methods>
-          <include name="autTC02"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setupTestSuite"/>
+          <include name="autTC01"/>
+          <include name="setupForTestNG_XMLTest"/>
+          <include name="setupForTestNG_XMLTest"/>
         </methods>
       </class> <!-- com.flipkart.automation.tests.Sanity -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- chrome test (failed) -->
+</suite> <!-- Failed suite [any name] -->

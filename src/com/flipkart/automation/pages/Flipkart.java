@@ -21,6 +21,7 @@ public class Flipkart {
 	private static String filePath = "TestData.xlsx";
 	ResultReporter reporter = ResultReporter.getInstance();
 	
+	
 
 	public static void setWebDriver(String browser) {
 		if(null==driver){
@@ -29,8 +30,12 @@ public class Flipkart {
 	}
 
 	private static void initDriver(String browser) {
-		if(browser.equalsIgnoreCase("CHROME")){
+		if(browser.equalsIgnoreCase("chrome")){
 			driver = BrowserFactory.getChromeDriver();
+		}
+		
+		if(browser.equalsIgnoreCase("firefox")){
+			driver = BrowserFactory.getFirefoxDriver();
 		}
 		
 	}
@@ -42,6 +47,8 @@ public class Flipkart {
 		Map<String, String> params = ExcelUtils.getDataRowFromExcel(filePath, sheetName,  headerRow,  dataRow);
 		System.out.println(params.get("URL"));
 		driver.get(params.get("URL"));
+		
+		reporter.reportPass("validate title", "should be ", "is " + driver.getTitle());
 		
 		return new FlipkartHomePage();
 		
